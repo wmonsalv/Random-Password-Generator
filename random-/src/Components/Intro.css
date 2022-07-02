@@ -1,0 +1,23 @@
+body{
+
+position: absolute;
+width: 550px;
+height: 550px;
+left: 62px;
+top: 64px;
+
+background: #1F2937;
+
+}
+
+span{
+    color:white;
+}
+
+h1{
+    color:#4ADF86;
+}
+
+h4{
+    color:#D5D4D8;
+}
