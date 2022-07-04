@@ -13,10 +13,10 @@ function Intro(){
        ).then(
          data => {
          setPassword(data)
-         console.log(password)
        }
      )
    }
+   
 
    let myElement = document.getElementById("pass")
 
