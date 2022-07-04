@@ -29,7 +29,10 @@ function Intro(){
         <br></br>
         <button onClick= {() => fetchAPI()} type="button" id="passwordGenerator" className="btn btn-success">Generate Passwords</button>
         <hr id="horz"/>
+        <div>
         <div id="pass" className="pw-display">{password.data}</div>
+        <button type="button" class="btn btn-light copy">Copy</button>
+        </div>
         </div>
     )
 }

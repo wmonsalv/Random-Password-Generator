@@ -1,6 +1,6 @@
 body{
 
-position: absolute;
+position: relative;
 width: 550px;
 height: 550px;
 left: 62px;
@@ -21,14 +21,9 @@ h4{
     color:#D5D4D8;
 }
 
-#myForm{
-    margin: 40px;
-    display: center;
-    background-color: #273549;
-}
-
 #horz{
     color:#D1D5DB;
+    position: relative;
 }
 
 #myPar{
@@ -36,18 +31,22 @@ h4{
 }
   
 .pw-display{
-      align-items:center; 
       background:#273549;
       height:2.5em;
       width: 12em;
       color:#5DEF92;
-      padding:0.4em 0.8em;
+      padding: 5px;
       border-radius: 6px;
+      display:inline-block;
+      position: relative;
   }
 
 .copy{
-    margin: 0 !important;
+    position: relative !important;
+    margin-bottom: 30px;
+    margin-left: 10px;
 }
+
 
 
 
