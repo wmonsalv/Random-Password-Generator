@@ -33,18 +33,20 @@ h4{
 .pw-display{
       background:#273549;
       height:2.5em;
-      width: 12em;
+      width: 20em;
       color:#5DEF92;
       padding: 5px;
       border-radius: 6px;
       display:inline-block;
       position: relative;
+      text-align: center;
+      align-items: left;
   }
 
 .copy{
-    position: relative !important;
+    position: absolute !important;
     margin-bottom: 30px;
-    margin-left: 10px;
+    align-items: right;
 }
 
 
