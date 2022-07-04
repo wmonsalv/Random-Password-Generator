@@ -1,9 +1,10 @@
 import './App.css';
-import React from "react"
+import React, {useState} from "react"
 import Intro from "./Components/Intro.js"
 import "./Components/Intro.css"
 
 function App() {
+  
   return (
     <div className="App">
     <Intro/>
