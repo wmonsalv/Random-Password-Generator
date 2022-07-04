@@ -5,7 +5,6 @@ width: 550px;
 height: 550px;
 left: 62px;
 top: 64px;
-
 background: #1F2937;
 
 }
@@ -35,3 +34,17 @@ h4{
 #myPar{
     color:white;
 }
+  
+.pw-display{
+      align-items:center; 
+      background:#273549;
+      height:2.5em;
+      width: 12em;
+      color:#5DEF92;
+      padding:0.4em 0.8em;
+      border-radius: 6px;
+  }
+
+
+
+  

@@ -17,6 +17,9 @@ function Intro(){
        }
      )
    }
+
+   let myElement = document.getElementById("pass")
+
    
 
     return(
@@ -26,10 +29,7 @@ function Intro(){
         <br></br>
         <button onClick= {() => fetchAPI()} type="button" id="passwordGenerator" className="btn btn-success">Generate Passwords</button>
         <hr id="horz"/>
-        <p id="myPar">{password.data}</p>
-        <form>
-        <input className="form-control" id="myForm" type="text" placeholder="Random Generated password"/>
-        </form>
+        <div id="pass" className="pw-display">{password.data}</div>
         </div>
     )
 }
