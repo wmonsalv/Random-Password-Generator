@@ -1,40 +1,65 @@
-import React, {useState} from "react"
-import copy from "copy-to-clipboard";  
+import React, { useState } from "react"
+import PasswordGenerator from "./PasswordForm";
 
-function Intro(){
+function Intro() {
 
-  const url = "https://passwordinator.herokuapp.com/generate?num=true&caps=true&char=true&len=15"
+  const letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+  const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+  const symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
+  let Newpassword = ""
 
-  const[password, setPassword] = useState([{}])
+  let number_letters = 1
+  let number_numbers = 5
+  let number_symbols = 16
+  
+
+  for (let i = 0; i < letters.length; i++) {
+    let randNumberLetters = Math.floor(Math.random() * 51)
+    if(i < number_letters){
+      Newpassword += letters[randNumberLetters]
+    }
+  }
+  for (let i = 0; i < numbers.length; i++) {
+    let randNumberNumbers = Math.floor(Math.random() * 10)
+    if(i < number_numbers){
+      Newpassword += numbers[randNumberNumbers]
+    }
+  }
+  for (let i = 0; i < symbols.length; i++) {
+    let randNumberSymbols = Math.floor(Math.random() * 9)
+    if(i < number_symbols){
+      Newpassword += symbols[randNumberSymbols]
+    }
+  }
+
+  //function that shuffles character order
+
+  function shuffle(s) {
+    let arr = s.split('');           
     
-   
-   const fetchAPI = () => {
-     fetch(url).then(
-       response => response.json()
-       ).then(
-         data => {
-         setPassword(data)
-       }
-     )
-   }
+    arr.sort(function() {
+      return 0.5 - Math.random();
+    });  
+    s = arr.join('');                
+    return s;                        
+  }
 
-   let myElement = document.getElementById("pass")
+  let finalPassword = shuffle(Newpassword)
 
-   
+  return (
+    <div>
+      <h1><span>Generate a</span> random password</h1>
+      <h4>Never use an insecure password again.</h4>
+      <br></br>
+      <hr id="horz" />
+      <PasswordGenerator />
+      <hr id="horz" />
+      <div>
+        <div id="pass" className="pw-display">{finalPassword}</div>
+      </div>
 
-    return(
-        <div>
-        <h1><span>Generate a</span> random password</h1>
-        <h4>Never use an insecure password again.</h4>
-        <br></br>
-        <button onClick= {() => fetchAPI()} type="button" id="passwordGenerator" className="btn btn-success">Generate Passwords</button>
-        <hr id="horz"/>
-        <div>
-        <div id="pass" className="pw-display">{password.data}</div>
-        </div>
-        
-        </div>
-    )
+    </div>
+  )
 }
 
 export default Intro
