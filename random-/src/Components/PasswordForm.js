@@ -87,7 +87,7 @@ function PasswordGenerator() {
                         <option>10</option>
                     </select>
                 </div>
-                <button id="submit" type="submit" class="btn btn-success">Generate Passwords</button>
+                <button id="submit" type="submit" className="btn btn-success">Generate Passwords</button>
             </form>
         </div>
     )
