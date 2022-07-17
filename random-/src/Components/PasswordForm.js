@@ -1,7 +1,7 @@
 import "./PasswordGenerator.css"
 import {useState} from "react"
 
-function PasswordGenerator() {
+function PasswordGenerator(props) {
 
 
     const [charCount, setCharCount] = useState("")
@@ -36,7 +36,7 @@ function PasswordGenerator() {
         setDigitCount("")
         setSymbolCount("")
 
-        console.log(formData)
+        props.onGeneratePass(formData)
     }
 
     return (
