@@ -8,16 +8,16 @@ function Intro() {
       ...enteredPass,
     }
 
-    console.log(myData)
+    //console.log(myData)
 
     const letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
     const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     const symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
     let Newpassword = ""
 
-    let number_letters = 4
-    let number_numbers = 3
-    let number_symbols = 9
+    let number_letters = myData.characterCount
+    let number_numbers = myData.numberCount
+    let number_symbols = myData.symbolsCount
 
 
     for (let i = 0; i < letters.length; i++) {
@@ -51,9 +51,10 @@ function Intro() {
       return s;
     }
 
-    //let finalPassword = shuffle(Newpassword)
+    let finalPassword = shuffle(Newpassword)
 
-    //console.log(finalPassword)
+    console.log(finalPassword)
+    
   }
 
   return (
