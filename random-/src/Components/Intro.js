@@ -5,8 +5,6 @@ function Intro() {
 
   const[currentPass, setCurrentPass] = useState("")
 
-
-
   const passwordData = (enteredPass) => {
     const myData = {
       ...enteredPass,

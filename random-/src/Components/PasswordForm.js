@@ -44,6 +44,7 @@ function PasswordGenerator(props) {
             <div className="form-group">
                     <label id="labelF" for="exampleFormControlSelect1">Char count</label>
                     <select value={charCount} onChange={onCharChange} className="form-control" id="exampleFormControlSelect1">
+                        <option>0</option>
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -59,6 +60,7 @@ function PasswordGenerator(props) {
                 <div className="form-group">
                     <label id="labelF" for="exampleFormControlSelect1">Digit count</label>
                     <select className="form-control" value={digitCount} onChange={onDigitChange} id="exampleFormControlSelect1">
+                        <option>0</option>
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -74,6 +76,7 @@ function PasswordGenerator(props) {
                 <div className="form-group">
                     <label id="labelF" for="exampleFormControlSelect1">Symbol count</label>
                     <select className="form-control" value={symbolCount} onChange={onSymbolChange} id="exampleFormControlSelect1">
+                        <option>0</option>
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
