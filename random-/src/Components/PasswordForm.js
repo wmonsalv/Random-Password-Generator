@@ -32,11 +32,10 @@ function PasswordGenerator(props) {
             symbolsCount: symbolCount
         }
 
+        props.onGeneratePass(formData)
         setCharCount("")
         setDigitCount("")
         setSymbolCount("")
-
-        props.onGeneratePass(formData)
     }
 
     return (
