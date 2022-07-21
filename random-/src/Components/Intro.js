@@ -22,19 +22,19 @@ function Intro() {
 
     for (let i = 0; i < letters.length; i++) {
       let randNumberLetters = Math.floor(Math.random() * 51)
-      if (i <= number_letters) {
+      if (i < number_letters) {
         Newpassword += letters[randNumberLetters]
       }
     }
     for (let i = 0; i < numbers.length; i++) {
       let randNumberNumbers = Math.floor(Math.random() * 10)
-      if (i <= number_numbers) {
+      if (i < number_numbers) {
         Newpassword += numbers[randNumberNumbers]
       }
     }
     for (let i = 0; i < symbols.length; i++) {
       let randNumberSymbols = Math.floor(Math.random() * 9)
-      if (i <= number_symbols) {
+      if (i < number_symbols) {
         Newpassword += symbols[randNumberSymbols]
       }
     }
